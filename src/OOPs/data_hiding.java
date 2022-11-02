@@ -1,5 +1,5 @@
 package OOPs;
-import java.util.Scanner
+import java.util.Scanner;
 
 class stdudent{
     private String name;
@@ -9,11 +9,28 @@ class stdudent{
         this.name = name;
     }
     public void setRoll_num(int roll_num){
-        this.roll_num = roll_num
+        this.roll_num = roll_num;
     }
 
-    public String 
+    public String getName(){
+        return name;
+    }
+    public int getRoll_num(){
+        return roll_num;
+    }
+
 }
 
 public class data_hiding {
+
+    public static void main(String[] args) {
+        stdudent std = new stdudent();
+
+        Scanner in = new Scanner(System.in);
+        std.setName(in.nextLine());
+        std.setRoll_num(290);
+        System.out.println(std.getName() + " : " + std.getRoll_num());
+    }
+
+
 }
