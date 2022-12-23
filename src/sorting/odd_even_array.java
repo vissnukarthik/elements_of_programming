@@ -1,13 +1,15 @@
-/*package sorting;
+package sorting;
 
 import java.util.Arrays;
 
 
 public class odd_even_array {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] arr = {3, 5, 2, 7, 9, 11, 12};
         //System.out.println(Arrays.toString(evenOdd(arr)));
-        evenOdd _book(arr);
+        //evenOdd_book(arr);
+        oddEvenbyts(arr);
+        toFindSwap(new int[]{3, 5, 2, 7, 9, 11, 12});
     }
 
     static int[] evenOdd(int[] arr) {
@@ -48,7 +50,38 @@ public class odd_even_array {
         }
         System.out.println(Arrays.toString(A));
     }
+    public static void oddEvenbyts(int[] arr){
+
+        int start = 0,end = arr.length-1,count = 0;
+        while (start < end){
+            while(arr[start] %2 == 0){
+                start++;
+            }
+            while (arr[end] %2 != 0){
+                end--;
+            }
+            if(start<end){
+                count++;
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end]=temp;
+            }
+        }
+        System.out.println("no swaps is  : "+count);
+        System.out.println(Arrays.toString(arr));
+    }
+    static void toFindSwap(int[] arr){
+        int odd = 0,even =0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0)even++;
+        }
+        for (int i=0;i<even;i++){
+            if(arr[i] % 2 != 0)odd++;
+        }
+        System.out.println("count swap => :"+odd);
+    }
 }
 
+
 // method 3 using bubble sort
-*/
+
