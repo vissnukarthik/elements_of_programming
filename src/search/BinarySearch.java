@@ -7,7 +7,12 @@ public class BinarySearch {
         int[] arr = {1,4,8,3,6,12,45};
         //System.out.println(binarySearch(arr,45));
         Arrays.sort(arr);
-        System.out.println(recursiveBinarySearch(arr,5,0,arr.length));
+        //System.out.println(recursiveBinarySearch(arr,1,0,arr.length-1));
+        //System.out.println(FirstUppercase("nitTish",0));
+        fib(6,0);
+    }
+    static int fib(int n,int ans){
+        return 0;
     }
     public static int recursiveBinarySearch(int[] arr,int target,int start,int end){
         int mid =  start+(end-start)/2;
@@ -32,5 +37,12 @@ public class BinarySearch {
                 return mid;
         }
         return -1;
+    }
+
+    static char FirstUppercase(String str,int index){
+        if(str.length()==index)return '-';
+        if( 'A'<= str.charAt(index) && str.charAt(index)<='Z' )
+            return str.charAt(index);
+        else return FirstUppercase(str,++index);
     }
 }
