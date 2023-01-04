@@ -21,4 +21,3 @@ public class abstract_cls {
         c.draw();
     }
 }
-

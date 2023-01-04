@@ -1,4 +1,4 @@
-package recursion;
+package recursion.basics;
 
 import java.util.Arrays;
 
@@ -13,14 +13,42 @@ public class basics {
 
         //System.out.println(checkPrime(18,Math.sqrt(145)));
        // System.out.println(factorial(5));
-        System.out.println(checkSorted(new int[]{4,5,68,7,8},3));
+       // System.out.println(checkSorted(new int[]{4,5,68,7,8},3));
+        print(1);
+       // System.out.println(sumDigit(1324));
+        //reverseNum(284);
+        //System.out.println(sumNum);
+        //System.out.println(revNum(284));
+    }
+
+    static int revNum(int n){
+        if (n==0) return 0;
+        int  siz= Integer.toString(n).length();
+        double mul = Math.pow((double) 10,siz-1);
+        return (n%10)*(int) mul + revNum(n/10);
+    }
+    public static int sumNum = 0;
+
+    static void reverseNum(int n){
+        if(n==0) return ;
+        sumNum=sumNum*10+(n%10);
+        reverseNum(n/10);
+    }
+    static int sumDigit(int n){
+        if(n==0) return 0;
+        return n%10 + sumDigit(n/10);
+    }
+    static void print(int n){
+        if (n==5) return;
+        print(n+1);
+        System.out.println(n);
     }
     public static boolean checkSorted(int[] arr,int index){
         if(index==-1 || arr[index] > arr[index+1]) return false;
         if(index >=0) return checkSorted(arr,--index);
         return true;
     }
-    public static int factorial(int num){
+     public static int factorial(int num){
         if(num <= 1) return 1;
         return num*factorial(num-1);
     }
