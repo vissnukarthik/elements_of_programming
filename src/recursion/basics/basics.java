@@ -28,7 +28,6 @@ public class basics {
         return (n%10)*(int) mul + revNum(n/10);
     }
     public static int sumNum = 0;
-
     static void reverseNum(int n){
         if(n==0) return ;
         sumNum=sumNum*10+(n%10);
