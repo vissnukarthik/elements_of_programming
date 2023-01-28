@@ -1,5 +1,5 @@
 package OOPs;
-
+//
 abstract class GraphicObject {
     int x, y;
     abstract void draw();

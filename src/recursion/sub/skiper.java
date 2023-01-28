@@ -1,13 +1,20 @@
 package recursion.sub;
 
-public class substr {
+public class skiper {
     public static void main(String[] args) {
-        System.out.println(removeChar("haka"));
+ //       System.out.println(removeChar("haka"));
 //        skip("","aadaij");
-
+        System.out.println(skipApple("appleplantappleiphone"));
     }
 
 
+    public static String skipApple(String up){
+        if (up.isEmpty()) return "";
+        if (up.startsWith("apple")){
+            return skipApple(up.substring(5));
+        }
+        else return up.charAt(0)+skipApple(up.substring(1));
+    }
     public static void skip(String p,String up){
         if(up.isEmpty()){
             System.out.println(p);
