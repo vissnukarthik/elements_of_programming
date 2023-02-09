@@ -22,7 +22,7 @@ class hello extends  Thread{
     public void run(){
         for (int i=0;i<5;i++){
             System.out.println("hello");
-            try {Thread.sleep(100);}catch (Exception e){}
+            try {Thread.sleep(  100);}catch (Exception e){}
         }
     }
 }
@@ -64,7 +64,8 @@ public class sample {
  */
        // Yield
         Thread yield_obj1 = new Yield(); yield_obj1.setName("yield 1- thread");
-        Thread yield_obj2 = new Yield(); yield_obj2.setName("yield 2- thread"); yield_obj2.setPriority(10);
+        Thread yield_obj2 = new Yield(); yield_obj2.setName("yield 2- thread");
+        yield_obj2.setPriority(10);
         yield_obj1.start();
         yield_obj2.start();
 
