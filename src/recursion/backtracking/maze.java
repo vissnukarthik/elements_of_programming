@@ -3,7 +3,7 @@ package recursion.backtracking;
 public class maze {
     public static void main(String[] args) {
        // System.out.println(count(3,3));
-       // pathDiagnol("",3,3);
+        // pathDiagnol("",3,3);
 
         boolean[][] board  = {
                 {true,true,true},
